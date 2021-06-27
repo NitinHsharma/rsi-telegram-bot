@@ -2,6 +2,7 @@ const http = require('http');
 const cron = require('node-cron');
 const getAllRSI = require('./src/rsi');
 const sendMsg = require('./src/telegram');
+const indices = require('./src/indices');
 
 cron.schedule('30 10 * * 1-5', () => {  // At 10:30, Monday through Friday
     dowork()
@@ -14,7 +15,7 @@ cron.schedule('30 16 * * 1-5', () => {  // At 16:30, Monday through Friday
 const dowork = ()=> {
     try {
         console.log('Running');
-        getAllRSI().then(res => {
+        getAllRSI(indices).then(res => {
             const data = `Today ${new Date().toLocaleString('en-IN')} ${res}`;
             sendMsg(data);
         });

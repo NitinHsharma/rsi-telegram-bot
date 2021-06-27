@@ -10,8 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "*",
     "node-cron": "^3.0.0",
-    "node-telegram-bot-api": "^0.53.0",
-    "table-scraper": "^1.0.3"
+    "node-telegram-bot-api": "^0.53.0"
   }
 }
