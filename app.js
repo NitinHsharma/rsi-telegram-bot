@@ -1,6 +1,6 @@
 const cron = require('node-cron');
-const getAllRSI = require('./rsi');
-const sendMsg = require('./telegram');
+const getAllRSI = require('./src/rsi');
+const sendMsg = require('./src/telegram');
 
 cron.schedule('30 10 * * 1-5', () => {  // At 10:30, Monday through Friday
     dowork()

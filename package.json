@@ -4,17 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "*",
-    "htmlparser2": "^6.1.0",
     "node-cron": "^3.0.0",
     "node-telegram-bot-api": "^0.53.0",
-    "table-scraper": "^1.0.3",
-    "x-ray": "^2.3.4"
+    "table-scraper": "^1.0.3"
   }
 }

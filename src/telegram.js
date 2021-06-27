@@ -1,5 +1,4 @@
 const TelegramBot = require('node-telegram-bot-api');
-// const getAllRSI = require('./rsi');
 
 const token = process.env.TOKEN;
 
