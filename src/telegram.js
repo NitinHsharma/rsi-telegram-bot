@@ -9,7 +9,10 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     console.log('Request came from ',chatId);
-    const msgText = msg.text.substr(1);
+    let msgText = msg.text.substr(1);
+    if (msgText.indexOf('@') > -1) {
+       msgText = msgText.substr(0, msgText.indexOf('@') + 1); 
+    }
     console.log('Msg ', msgText);
     if (!msgText) {
         bot.sendMessage(chatId, 'Please select any command by typing /');
