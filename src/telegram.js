@@ -36,7 +36,7 @@ bot.on('message', (msg) => {
 
 const sendMsg = (text) => {
     try {
-        bot.sendMessage('-555705163', text);
+        bot.sendMessage('@rsi_indices', text);
     } catch (error) {
         console.log(error);
     }
