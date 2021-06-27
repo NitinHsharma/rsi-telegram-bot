@@ -11,7 +11,7 @@ bot.on('message', (msg) => {
     console.log('Request came from ',chatId);
     let msgText = msg.text.substr(1);
     if (msgText.indexOf('@') > -1) {
-       msgText = msgText.substr(0, msgText.indexOf('@') + 1); 
+       msgText = msgText.substr(0, msgText.indexOf('@')); 
     }
     console.log('Msg ', msgText);
     if (!msgText) {
