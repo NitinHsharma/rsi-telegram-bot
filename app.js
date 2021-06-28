@@ -6,11 +6,16 @@ const indices = require('./src/indices');
 
 cron.schedule('30 10 * * 1-5', () => {  // At 10:30, Monday through Friday
     dowork()
-});
+}, { timezone : "Asia/Kolkata" } );
 
 cron.schedule('30 16 * * 1-5', () => {  // At 16:30, Monday through Friday
     dowork()
-});
+}, { timezone : "Asia/Kolkata" } );
+
+
+cron.schedule('20 11 * * *', () => {  // At 16:30, Monday through Friday
+    console.log('Testing timezone');
+}, { timezone : "Asia/Kolkata" } );
 
 const dowork = ()=> {
     try {
