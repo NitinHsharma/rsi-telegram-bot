@@ -12,7 +12,7 @@ async function getAllRSI(requestArray) {
         const $ = cheerio.load(response.data);
         const todaysRSI = $('.tl-dataTable > tbody > tr:nth-child(2) > td:nth-child(2)').html().trim();
         if (msg) msg += '\n';
-        msg = `${name} is ${todaysRSI}`;
+        msg += `${name} is ${todaysRSI}`;
     }
     return msg;
 }
