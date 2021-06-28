@@ -21,7 +21,7 @@ const dowork = ()=> {
     try {
         console.log('Running');
         getAllRSI(indices).then(res => {
-            const data = `Today ${new Date().toLocaleString('en-IN')} ${res}`;
+            const data = `Today ${new Date().toLocaleString('en-IN')} \n ${res}`;
             sendMsg(data);
         });
     } catch (error) {

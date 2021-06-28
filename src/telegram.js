@@ -18,7 +18,8 @@ bot.on('message', (msg) => {
         bot.sendMessage(chatId, 'Please select any command by typing /');
         return;
     }
-    const row = indices.filter(item => item.command === msgText);
+    const row = msgText === 'all' ? indices : indices.filter(item => item.command === msgText);
+    
     console.log(row);
     if (!row.length) {
         bot.sendMessage(chatId, 'Currently we do not support this indices');
