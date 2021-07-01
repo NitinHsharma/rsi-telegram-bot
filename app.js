@@ -4,17 +4,8 @@ const getAllRSI = require('./src/rsi');
 const sendMsg = require('./src/telegram');
 const indices = require('./src/indices');
 
-cron.schedule('30 10 * * 1-5', () => {  // At 10:30, Monday through Friday
+cron.schedule('0 10 * * 1-5', () => {  // At 10:00, Monday through Friday
     dowork()
-}, { timezone : "Asia/Kolkata" } );
-
-cron.schedule('30 16 * * 1-5', () => {  // At 16:30, Monday through Friday
-    dowork()
-}, { timezone : "Asia/Kolkata" } );
-
-
-cron.schedule('20 11 * * *', () => {  // At 16:30, Monday through Friday
-    console.log('Testing timezone');
 }, { timezone : "Asia/Kolkata" } );
 
 const dowork = ()=> {
